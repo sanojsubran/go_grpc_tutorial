@@ -28,7 +28,7 @@ func main() {
 	if nil != err {
 		log.Fatalf("\nError: %v", err)
 	}
-	fmt.Printf("\nServer is listening on port 127.0.0.0:8793")
+	fmt.Printf("\nServer is listening on port 127.0.0.1:8793")
 	s := grpc.NewServer()
 	pipe.RegisterGreeterServer(s, &server{})
 	s.Serve(lis)
